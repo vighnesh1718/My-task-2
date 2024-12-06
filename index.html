@@ -3,25 +3,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <title>My Tasks</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  
     <header class="header">
         <div class="logo">
             <img src="https://www.eklavvya.com/wp-content/uploads/2024/07/EY-Logo.webp" alt="EY Logo">
         </div>
-        <nav>
+        <nav style="display: flex;justify-content: center;align-items: center;">
             <button class="nav-btn">Site Navigation</button>
             <button class="nav-btn">Tech Support</button>
+            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/Untitled-design-5.png" style="width: 25px;margin-left: 15px;">
         </nav>
     </header>
-
+    <nav class="custom-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="custom-breadcrumbs-list">
+          <li class="custom-breadcrumbs-item">
+            <a href="https://example.com/" class="custom-breadcrumbs-link custom-breadcrumbs-current">
+              <i class="fas fa-home"></i>
+          </a>
+          </li>
+          <li class="custom-breadcrumbs-item">
+              <a href="https://example.com/articles/" class="custom-breadcrumbs-link custom-breadcrumbs-current">
+                  My Tasks
+              </a>
+          </li>
+          
+      </ol>
+  </nav>
     <div class="wrapper">
         <main>
             <section class="tasks">
-                <h1 style="text-align: center; margin: 0px 20px 20px 20px; font-size: 35px; font-weight: 800">My Tasks</h1>
+                
                 <ul class="cards">
                     <li>
                     <a href="" class="card">
@@ -40,7 +56,7 @@
                     </a>      
                     </li>
                     <li>
-                    <a href="" class="card">
+                    <a href="Tasks Details.html" class="card">
                       <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/box-shadow-rgba0-0-0-0.1-0px-10px-15px-3px-rgba0-0-0-0.05-0px-4px-6px-2px-1.png" class="card__image" alt="" />
                       <div class="card__overlay">        
                         <div class="card__header">
@@ -80,7 +96,7 @@ body {
     flex-direction: column;
     background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+ 
   margin: 0;
 }
 
@@ -89,29 +105,30 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 18px 120px;
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
     margin: 0px 0px 0px 0px;
         width: 100%; /* Ensure header stretches across the screen */
-    max-width: 1000px;
+    
     position: relative;
-    top: -30px;
+    top: 0px;
 }
 
 .header .logo img {
-    height: 40px;
+  height: 45px;
+  margin: -20px;
   
 }
 
 .nav-btn {
-    background-color: #007bff;
-    color: white;
+    background-color: #7b7b7b;
+    color: #F0F0F0;
     border: none;
     padding: 8px 20px;
-    margin-left: 10px;
+   margin-left:10px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -121,9 +138,7 @@ body {
   font-weight: 600;
 }
 
-.nav-btn:hover {
-    background-color: #e97448;
-}
+
 
 .wrapper {
     display: flex;
@@ -220,7 +235,7 @@ main {
 }
 
 .start-btn {
-    background-image: linear-gradient(to right, #0072ff 0%, #00c6ff  51%, #0072ff  100%);
+  background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
     transition: 0.5s;
     color: white;
     padding: 10px 20px;
@@ -229,7 +244,7 @@ main {
     cursor: pointer;
     transition: all 0.5s ease;
     width: 100%;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   background-size: 200% auto;
@@ -293,7 +308,7 @@ main {
     
     .card__image {      
       width: 100%;
-      height: auto;
+      height: 400px;
     }
     
     .card__overlay {
@@ -380,29 +395,44 @@ main {
       overflow: hidden;
     }    
     
-    .start-btn {
-        background-image: linear-gradient(to right, #0072ff 0%, #00c6ff  51%, #0072ff  100%);
-        transition: 0.5s;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.5s ease;
-        width: 100%;
-      font-size: 16px;
-      font-family: 'Nunito Sans', sans-serif;
-      font-weight: 700;
-      background-size: 200% auto;
-      
-    }
     
-    .start-btn:hover {
-        transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      background-position: right center; /* change the direction of the change here */
-                color: #fff;
-                text-decoration: none;
-    }
     
     </style>
+    <style>
+      .custom-breadcrumbs {
+         width: 90%;
+          margin: 2rem 0;
+      }
+      
+      .custom-breadcrumbs-list {
+          display: flex;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          font-size: 18px;
+      }
+      
+      .custom-breadcrumbs-item + .custom-breadcrumbs-item::before {
+          content: ">";
+          margin: 0 0.5rem;
+          color: #6b7280;
+      }
+      
+      .custom-breadcrumbs-link {
+          text-decoration: none;
+          color: #000;
+          font-weight: 600;
+          transition: color 0.2s ease;
+      }
+      
+      .custom-breadcrumbs-link:hover,
+      .custom-breadcrumbs-link:focus {
+          color: #007c89;
+      }
+      
+      .custom-breadcrumbs-current {
+          color: #007c89!important;
+          font-weight: 600;
+      }
+      </style>
+      
