@@ -3,119 +3,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <title>My Tasks</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<header class="header">
-    <div class="logo">
-        <img src="https://www.eklavvya.com/wp-content/uploads/2024/07/EY-Logo.webp" alt="EY Logo">
+  
+    <header class="header">
+        <div class="logo">
+            <img src="https://www.eklavvya.com/wp-content/uploads/2024/07/EY-Logo.webp" alt="EY Logo">
+        </div>
+        <nav style="display: flex;justify-content: center;align-items: center;">
+            <button class="nav-btn">Site Navigation</button>
+            <button class="nav-btn">Tech Support</button>
+            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/Untitled-design-5.png" style="width: 25px;margin-left: 15px;">
+        </nav>
+    </header>
+    <nav class="custom-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="custom-breadcrumbs-list">
+          <li class="custom-breadcrumbs-item">
+            <a href="https://example.com/" class="custom-breadcrumbs-link custom-breadcrumbs-current">
+              <i class="fas fa-home"></i>
+          </a>
+          </li>
+          <li class="custom-breadcrumbs-item">
+              <a href="https://example.com/articles/" class="custom-breadcrumbs-link custom-breadcrumbs-current">
+                  My Tasks
+              </a>
+          </li>
+          <li class="custom-breadcrumbs-item">
+              <a href="https://example.com/articles/development" class="custom-breadcrumbs-link ">
+                  Task Details
+              </a>
+          </li>
+          
+      </ol>
+  </nav>
+    <div class="wrapper">
+        <main>
+            <section class="tasks">
+                
+                <ul class="cards">
+                    <li>
+                    <a href="tabs switch.html" class="card">
+                      <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/images.png" class="card__image" alt="" />
+                      <div class="card__overlay">
+                        <div class="card__header">
+                          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                          
+                          <div class="card__header-text">
+                            <h3 class="card__title">Case Study</h3>            
+                            <span class="card__status">Time: 00:05:00</span>
+                          </div>
+                        </div>
+                        <p class="card__description"><button class="start-btn">Start</button>
+                           
+                          </p>
+                      </div>
+                    </a>      
+                    </li>
+                    <li>
+                    <a href="tabs switch.html" class="card">
+                      <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/images-1.png" class="card__image" alt="" />
+                      <div class="card__overlay">        
+                        <div class="card__header">
+                          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                          
+                          <div class="card__header-text">
+                            <h3 class="card__title">Role Play</h3>
+                            <span class="card__status">Time: 06:00:00</span>
+                          </div>
+                        </div>
+                        <p class="card__description"><button class="start-btn" style="background-image: linear-gradient(to right, #f39c12 0%, #ffbb50 51%, #f39c12 100%);">In Progress</button></p>
+                      </div>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="tabs switch.html" class="card">
+                          <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/images-2.png" class="card__image" alt="" />
+                          <div class="card__overlay">        
+                            <div class="card__header">
+                              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                              
+                              <div class="card__header-text">
+                                <h3 class="card__title">Scenario Analysis</h3>
+                                <span class="card__status">Time: 00:10:00</span>
+                              </div>
+                            </div>
+                            <p class="card__description"><button class="start-btn" style="background-image: linear-gradient(to right, green 0%, #4a964a 51%, green 100%) !important;">Completed</button></p>
+                          </div>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="tabs switch.html" class="card">
+                              <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/box-shadow-rgba0-0-0-0.1-0px-10px-15px-3px-rgba0-0-0-0.05-0px-4px-6px-2px-2.png" class="card__image" alt="" />
+                              <div class="card__overlay">        
+                                <div class="card__header">
+                                  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                                  
+                                  <div class="card__header-text">
+                                    <h3 class="card__title">Competency Interview</h3>
+                                    <span class="card__status">Time: 06:40:00</span>
+                                  </div>
+                                </div>
+                                <p class="card__description"><button class="start-btn">Start</button></p>
+                              </div>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="tabs switch.html" class="card">
+                                  <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/images-3.png" class="card__image" alt="" />
+                                  <div class="card__overlay">        
+                                    <div class="card__header">
+                                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                                      
+                                      <div class="card__header-text">
+                                        <h3 class="card__title">Functional Simulation</h3>
+                                        <span class="card__status">Time: 00:50:00</span>
+                                      </div>
+                                    </div>
+                                    <p class="card__description"><button class="start-btn" style="background-image: linear-gradient(to right, green 0%, #4a964a 51%, green 100%) !important;">Completed</button></p>
+                                  </div>
+                                </a>
+                                </li>
+                    </ul>
+            </section>
+        </main>
     </div>
-    <nav>
-        <button class="nav-btn">Site Navigation</button>
-        <button class="nav-btn">Tech Support</button>
-    </nav>
-</header>
-
-<main>
-    <section class="tasks">
-        <h1 style="text-align: center;margin: 0px 20px 20px 20px;font-size: 35px;font-weight: 800">Tasks Details</h1>
-        <div class="tasks-grid">
-        <div class="task-card">
-            <h2>Task 1 Case Study</h2>
-            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/Untitled-design.png" alt="">
-            <div class="task-time">
-            
-            <p>Time: 00:09:00</p>
-        </div>
-        <a href="tabs switch.html">
-            <button class="start-btn">Start</button>
-        </a>
-        </div>
-        <div class="task-card">
-            <h2>Task 2 Role Play</h2>
-            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/Untitled-design-1.png">
-            <div class="task-time">
-            
-            <p>Time: 00:07:00</p>
-        </div>
-        <a href="tabs switch.html">
-            <button class="start-btn">In Progress</button>
-        </a>
-        </div>
-        <div class="task-card">
-            <h2>Task 3 Scenario Analysis</h2>
-            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/Untitled-design.png" alt="">
-            <div class="task-time">
-            
-            <p>Time: 06:00:00</p>
-        </div>
-        <a href="tabs switch.html">
-            <button class="start-btn">In Progress</button>
-        </a>
-        </div>
-        <div class="task-card" style="border-image: linear-gradient(to right, green 0%, #4a964a 51%, green 100%) 1 !important;">
-            <h2>Task 4 Interview</h2>
-            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/Untitled-design-1.png">
-            <div class="task-time">
-            
-            <p>Time: 00:05:00</p>
-        </div>
-            <button class="start-btn" style="background-image: linear-gradient(to right, green 0%, #4a964a 51%, green 100%) !important">Completed</button>
-        </div>
-        <div class="task-card">
-            <h2>Task 1 Case Study</h2>
-            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/Untitled-design.png" alt="">
-            <div class="task-time">
-            
-            <p>Time: 00:09:00</p>
-        </div>
-        <a href="tabs switch.html">
-            <button class="start-btn">Start</button>
-        </a>
-        </div>
-        <div class="task-card" style="border-image: linear-gradient(to right, green 0%, #4a964a 51%, green 100%) 1 !important;">
-            <h2>Task 2 Role Play</h2>
-            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/Untitled-design-1.png">
-            <div class="task-time">
-            
-            <p>Time: 00:07:00</p>
-        </div>
-            <button class="start-btn" style="background-image: linear-gradient(to right, green 0%, #4a964a 51%, green 100%) !important">Completed</button>
-        </div>
-        <div class="task-card">
-            <h2>Task 3 Scenario Analysis</h2>
-            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/Untitled-design.png" alt="">
-            <div class="task-time">
-            
-            <p>Time: 06:00:00</p>
-        </div>
-        <a href="tabs switch.html">
-            <button class="start-btn">In Progress</button>
-        </a>
-        </div>
-        <div class="task-card">
-            <h2>Task 4 Interview</h2>
-            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/Untitled-design-1.png">
-            <div class="task-time">
-            
-            <p>Time: 00:05:00</p>
-        </div>
-        <a href="tabs switch.html">
-            <button class="start-btn">In Progress</button>
-        </a>
-        </div>
-        </div>
-    </section>
-    <nav style="display: flex;gap: 20px;width: 25%;">
-        <button class="ft-nav-btn">Final Submit</button>
-        <button class="ft-nav-btn">Feedback Form</button>
-    </nav>
-</main>
-
 </body>
+
+
 </html>
 <style>
   /* Basic Reset */
@@ -126,13 +143,15 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     background-image: url('https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/White-Dark-Blue-Futuristic-Robot-Desktop-Wallpaper-3.png');    
     color: #333;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-attachment: fixed; 
     background-repeat: no-repeat;
   background-size: cover;
+ 
+  margin: 0;
 }
 
 /* Header styling */
@@ -140,24 +159,27 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 18px 120px;
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
     margin: 0px 0px 0px 0px;
-    width: 100%; /* Ensure header stretches across the screen */
-    max-width: 1000px;
+        width: 100%; /* Ensure header stretches across the screen */
+    
+    position: relative;
+    top: 0px;
 }
 
 .header .logo img {
-    height: 40px;
+  height: 45px;
+  margin: -20px;
   
 }
 
 .nav-btn {
-    background-color: #007bff;
-    color: white;
+    background-color: #7b7b7b;
+    color: #F0F0F0;
     border: none;
     padding: 8px 20px;
     margin-left: 10px;
@@ -170,8 +192,27 @@ body {
   font-weight: 600;
 }
 
-.nav-btn:hover {
-    background-color: #0056b3;
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+    flex-direction: column;
+}
+
+
+.task-card-content
+
+{
+margin: 190px -15px -15px -15px;
+  
+  padding: 15px 15px 15px 15px;
+  border-radius: 0px 0px 10px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
 }
 
 /* Main section styling */
@@ -179,21 +220,19 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     margin: 20px 0px;
-    flex-direction: column;
 }
 
 .tasks {
-    text-align: center;
-    margin-bottom: 50px;
+    
 }
 
 
 
 .tasks-grid {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
@@ -202,20 +241,22 @@ main {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 15px;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 350px;
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
     text-align: center;
-    border-bottom: 6px solid;
-    border-image: linear-gradient(to right, #e45f2b 0%, #ff784e  51%, #e45f2b  100%) 1 ;
+    /*border-bottom: 6px solid ;
+    border-image: linear-gradient(to right, #e45f2b 0%, #ff784e  51%, #e45f2b  100%) 1 ;*/
     backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    background-size: contain;
 }
 
 .task-time
 
 {
     display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 
@@ -228,8 +269,17 @@ main {
 .task-card h2 {
     font-size: 22px;
     color: #000;
-  margin: 0px 0px 10px 0px;
- 
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+}
+
+.task-card h2::after {
+    content: "";
+    display: block;
+    margin: 10px auto 0 auto; /* Adjust spacing around the line */
+    width: 100%; /* Line width */
+    height: 1px; /* Line height */
+    background: #ccc; /* Faint color for the line */
 }
 
 .task-card p {
@@ -239,7 +289,7 @@ main {
 }
 
 .start-btn {
-    background-image: linear-gradient(to right, #e45f2b 0%, #ff784e  51%, #e45f2b  100%);
+    background-image: linear-gradient(to right, #007bff 0%, #4ea3ff 51%, #007bff 100%);
     transition: 0.5s;
     color: white;
     padding: 10px 20px;
@@ -247,30 +297,15 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s ease;
-    width: 90%;
-  font-size: 16px;
+    width: 100%;
+  font-size: 14px;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   background-size: 200% auto;
-}
-
-.ft-nav-btn
-{
-    background-color: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  width: 90%;
-  font-size: 16px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 600;
+  
 }
 
 .start-btn:hover {
-    
     transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   background-position: right center; /* change the direction of the change here */
@@ -278,14 +313,181 @@ main {
             text-decoration: none;
 }
 
-.ft-nav-btn:hover
-{
-    transform: translateY(-5px);
-}
+/*
 .task-card:hover {
     
     
     border-bottom: 6px solid;
     border-image: linear-gradient(to right, #ff784e 0%, #e45f2b 51%, #ff784e 100%) 1;
 }
+*/
+
+
 </style>
+<style>
+
+
+    :root {
+      --surface-color: #fff;
+      --curve: 20;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Nunito Sans', sans-serif;
+      background-color: #fef8f8;
+    }
+    
+    .cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+  justify-content: center;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .card {
+      position: relative;
+      display: block;
+      height: 100%;  
+      border-radius: calc(var(--curve) * 1px);
+      overflow: hidden;
+      text-decoration: none;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+      width: 350px;
+    }
+    
+    .card__image {      
+      width: 100%;
+      height: 400px;
+    }
+    
+    .card__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;      
+      border-radius: calc(var(--curve) * 1px);    
+      background-color: var(--surface-color);      
+      transform: translateY(100%);
+      transition: .2s ease-in-out;
+    }
+    
+    .card:hover .card__overlay {
+      transform: translateY(0);
+    }
+    
+    .card__header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      padding: 20px 30px 20px 30px;
+      border-radius: calc(var(--curve) * 1px) 0 0 0;    
+      background-color: var(--surface-color);
+      transform: translateY(-100%);
+      transition: .2s ease-in-out;
+    }
+    
+    .card__arc {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      bottom: 100%;
+      right: 0;      
+      z-index: 1;
+    }
+    
+    .card__arc path {
+      fill: var(--surface-color);
+      d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+    }       
+    
+    .card:hover .card__header {
+      transform: translateY(0);
+    }
+    
+    .card__thumb {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;      
+      border-radius: 50%;      
+    }
+    
+    .card__title {
+        font-size: 1.5em;
+      margin: 0 0 .3em;
+      color: #6A515E;
+    }
+    
+    .card__tagline {
+      display: block;
+      margin: 1em 0;
+      font-family: "MockFlowFont";  
+      font-size: .8em; 
+      color: #D7BDCA;  
+    }
+    
+    .card__status {
+      font-size: 1em;
+      color: #000;
+      font-weight: 600;
+    }
+    
+    .card__description {
+        padding: 0.5em 1.5em 1.5em;
+      margin: 0;
+      color: #D7BDCA;
+      font-family: "MockFlowFont";   
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }    
+    
+    
+    
+    </style>
+    <style>
+      .custom-breadcrumbs {
+         width: 90%;
+          margin: 2rem 0;
+      }
+      
+      .custom-breadcrumbs-list {
+          display: flex;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          font-size: 18px;
+      }
+      
+      .custom-breadcrumbs-item + .custom-breadcrumbs-item::before {
+          content: ">";
+          margin: 0 0.5rem;
+          color: #6b7280;
+      }
+      
+      .custom-breadcrumbs-link {
+          text-decoration: none;
+          color: #000;
+          font-weight: 600;
+          transition: color 0.2s ease;
+      }
+      
+      .custom-breadcrumbs-link:hover,
+      .custom-breadcrumbs-link:focus {
+          color: #007c89;
+      }
+      
+      .custom-breadcrumbs-current {
+          color: #007c89!important;
+          font-weight: 600;
+      }
+      </style>
+      
