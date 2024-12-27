@@ -1,117 +1,111 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-  
-    <header class="header">
-        <div class="logo">
-            <img src="https://www.eklavvya.com/wp-content/uploads/2024/07/EY-Logo.webp" alt="EY Logo">
-        </div>
-        <nav style="display: flex;justify-content: center;align-items: center;">
-            <button class="nav-btn">Site Navigation</button>
-            <button class="nav-btn">Tech Support</button>
-            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/Untitled-design-5.png" style="width: 25px;margin-left: 15px;">
-        </nav>
-    </header>
-    <nav class="custom-breadcrumbs" aria-label="Breadcrumb">
-      <ol class="custom-breadcrumbs-list">
-          <li class="custom-breadcrumbs-item">
-            <a href="https://example.com/" class="custom-breadcrumbs-link custom-breadcrumbs-current">
-              <i class="fas fa-home"></i>
-          </a>
-          </li>
-          <li class="custom-breadcrumbs-item">
-              <a href="https://example.com/articles/" class="custom-breadcrumbs-link custom-breadcrumbs-current">
-                  My Tasks
-              </a>
-          </li>
-          
-      </ol>
-  </nav>
-    <div class="wrapper">
-        <main>
-            <section class="tasks">
-                
-                <ul class="cards">
-                    <li>
-                    <a href="" class="card">
-                      <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/box-shadow-rgba0-0-0-0.1-0px-10px-15px-3px-rgba0-0-0-0.05-0px-4px-6px-2px.png" class="card__image" alt="" />
-                      <div class="card__overlay">
-                        <div class="card__header">
-                          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                          
-                          <div class="card__header-text">
-                            <h3 class="card__title">Site Navigation</h3>            
-                            <span class="card__status">Time: 00:05:00</span>
-                          </div>
-                        </div>
-                        <p class="card__description"><button class="start-btn">Start</button></p>
-                      </div>
-                    </a>      
-                    </li>
-                    <li>
-                    <a href="Tasks Details.html" class="card">
-                      <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/box-shadow-rgba0-0-0-0.1-0px-10px-15px-3px-rgba0-0-0-0.05-0px-4px-6px-2px-1.png" class="card__image" alt="" />
-                      <div class="card__overlay">        
-                        <div class="card__header">
-                          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
-                          
-                          <div class="card__header-text">
-                            <h3 class="card__title">Capability Inventory</h3>
-                            <span class="card__status">Time: 06:00:00</span>
-                          </div>
-                        </div>
-                        <p class="card__description"><button class="start-btn">Start CDI</button></p>
-                      </div>
-                    </a>
-                    </li>
-                     
-                    </ul>
-            </section>
-        </main>
-    </div>
-</body>
 
-
-</html>
-<style>
-  /* Basic Reset */
-
-
-/* Body styling */
-body {
-    font-family: 'Nunito Sans', sans-serif;
-    background-image: url('https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/White-Dark-Blue-Futuristic-Robot-Desktop-Wallpaper-3.png');    
+    <style>
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            background-image: url('https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/background.png');    
     color: #333;
     background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     flex-direction: column;
     background-repeat: no-repeat;
   background-size: cover;
  
-  margin: 0;
-}
+        }
 
-/* Header styling */
-.header {
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+  align-items: center;
+            padding: 20px;
+            background-color: white;
+            max-width: 1200px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .left-section {
+            flex: 1;
+            padding: 10px 20px;
+}
+        
+
+        .left-section h1 {
+            color: rgb(50, 84, 125);
+            font-size: 2rem;
+            margin-bottom: 0;
+            font-weight: 800;
+        }
+
+        .left-section h2 {
+            color: #6c757d;
+            font-size: 1.2rem;
+            margin: 0 0 20px 0;
+        }
+
+        .left-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .left-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .right-section {
+            flex: 0.5;
+        }
+
+        .right-section video,
+        .right-section iframe {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .arrow {
+            width: 50px;
+            height: 50px;
+            background-color: #f8de4f;
+            clip-path: polygon(0% 100%, 0% 0%, 100% 50%);
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .arrow-2 {
+            width: 50px;
+            height: 50px;
+            background-color: #f8de4f;
+            clip-path: polygon(0% 100%, 0% 0%, 100% 50%);
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .header-2 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
    padding: 18px 45px;
-    background: rgba(255, 255, 255, 0.5);
+    background: #fff;
     
     backdrop-filter: blur(10px);
     
     margin: 0px 0px 0px 0px;
-        width: 100%; /* Ensure header stretches across the screen */
+        
     
     position: relative;
     top: 0px;
@@ -119,319 +113,145 @@ body {
 
 .header .logo img {
   height: 40px;
+ 
   
 }
 
 .nav-btn {
-    background-color: #7b7b7b;
-    color: #F0F0F0;
-    border: none;
-    padding: 8px 20px;
-   margin-left:10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 14px;
- 
+  background-color: #f8de4f;
+  color: #162537;
+  border: none;
+  padding: 8px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
 }
+.next-button {
+    position: absolute;
+            bottom: 20px;
+            right: 50%;
+            padding: 10px 20px;
+            background-color: #f8de4f;
+  color: #4f543c;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+        }
 
-
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    margin-top: 20px; /* Optional spacing between header and main */
-    flex-direction: column;
+        .shipping-banner__inner::before {
+  left: -10px;
 }
-
-
-.task-card-content
-
-{
-margin: 190px -15px -15px -15px;
-  
-  padding: 15px 15px 15px 15px;
-  border-radius: 0px 0px 10px 10px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
+.status{
+  position: absolute;
+  top: 10px;
+  background-color: white;
+  left: 10px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  color: green;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  font-weight: 600;
 }
-
-/* Main section styling */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0px;
+.shipping-banner__inner::after{
+  right: 25px;
 }
-
-.tasks {
-    
+.shipping-banner {
+  height: 62px;
+  font-size: 20px;
 }
-
-
-
-.tasks-grid {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+.shipping-banner {
+background: rgb(248, 222, 79);
+height: 50px;
+font-size: 13px;
+line-height: 1.85;
+text-align: center;
+position: relative;
+width: 100%;
+top: 0;
+left: 0;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-transition: font-size .1s ease-in-out;
+transition: font-size .1s ease-in-out;
+z-index: 5;
+overflow: hidden;
 }
+.shipping-banner__inner::after, .shipping-banner__inner::before {
+content: "";
+display: inline-block!important;
+position: absolute!important;
 
-.task-card {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 15px;
-    width: 350px;
-    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);*/
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
-    text-align: center;
-    /*border-bottom: 6px solid ;
-    border-image: linear-gradient(to right, #e45f2b 0%, #ff784e  51%, #e45f2b  100%) 1 ;*/
-    backdrop-filter: blur(10px);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    background-size: contain;
+width: 94px;
+height: 162px;
+top: 0;
+-webkit-transform: rotate(-35deg) translateY(-50%);
+transform: rotate(-35deg) translateY(-50%);
+border-right: 3px solid #fff;
 }
-
-.task-time
-
-{
-    display: flex;
-  justify-content: space-between;
-}
-
-
-.task-card img{
-    width: 100%;
-    border-radius: 5px;
-}
-
-
-.task-card h2 {
-    font-size: 22px;
-    color: #000;
-    margin: 0px 0px 0px 0px;
-    text-align: left;
-}
-
-.task-card h2::after {
-    content: "";
-    display: block;
-    margin: 10px auto 0 auto; /* Adjust spacing around the line */
-    width: 100%; /* Line width */
-    height: 1px; /* Line height */
-    background: #ccc; /* Faint color for the line */
-}
-
-.task-card p {
-    font-size: 18px;
-    font-weight: 700;
-
-}
-
-.start-btn {
-  background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
-    transition: 0.5s;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    width: 100%;
-  font-size: 14px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 700;
-  background-size: 200% auto;
-  
-}
-
-.start-btn:hover {
-    transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-}
-
-/*
-.task-card:hover {
-    
-    
-    border-bottom: 6px solid;
-    border-image: linear-gradient(to right, #ff784e 0%, #e45f2b 51%, #ff784e 100%) 1;
-}
-*/
-
-
-</style>
-<style>
-
-
-    :root {
-      --surface-color: #fff;
-      --curve: 20;
-    }
-    
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Nunito Sans', sans-serif;
-      background-color: #fef8f8;
-    }
-    
-    .cards {
-      display: flex;
-      gap: 2rem;
-      
-      padding: 0;
-      list-style-type: none;
-    }
-    
-    .card {
-      position: relative;
-      display: block;
-      height: 100%;  
-      border-radius: calc(var(--curve) * 1px);
-      overflow: hidden;
-      text-decoration: none;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-      width: 350px;
-    }
-    
-    .card__image {      
-      width: 100%;
-      height: 400px;
-    }
-    
-    .card__overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;      
-      border-radius: calc(var(--curve) * 1px);    
-      background-color: var(--surface-color);      
-      transform: translateY(100%);
-      transition: .2s ease-in-out;
-    }
-    
-    .card:hover .card__overlay {
-      transform: translateY(0);
-    }
-    
-    .card__header {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 2em;
-      padding: 20px 30px 20px 30px;
-      border-radius: calc(var(--curve) * 1px) 0 0 0;    
-      background-color: var(--surface-color);
-      transform: translateY(-100%);
-      transition: .2s ease-in-out;
-    }
-    
-    .card__arc {
-      width: 80px;
-      height: 80px;
-      position: absolute;
-      bottom: 100%;
-      right: 0;      
-      z-index: 1;
-    }
-    
-    .card__arc path {
-      fill: var(--surface-color);
-      d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-    }       
-    
-    .card:hover .card__header {
-      transform: translateY(0);
-    }
-    
-    .card__thumb {
-      flex-shrink: 0;
-      width: 50px;
-      height: 50px;      
-      border-radius: 50%;      
-    }
-    
-    .card__title {
-        font-size: 1.5em;
-      margin: 0 0 .3em;
-      color: #6A515E;
-    }
-    
-    .card__tagline {
-      display: block;
-      margin: 1em 0;
-      font-family: "MockFlowFont";  
-      font-size: .8em; 
-      color: #D7BDCA;  
-    }
-    
-    .card__status {
-      font-size: 1em;
-      color: #000;
-      font-weight: 600;
-    }
-    
-    .card__description {
-      padding: 0.5em 1.5em 1.5em;
-      margin: 0;
-      color: #D7BDCA;
-      font-family: "MockFlowFont";   
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
-      overflow: hidden;
-    }    
-    
-    
-    
     </style>
-    <style>
-      .custom-breadcrumbs {
-         width: 90%;
-          margin: 2rem 0;
-      }
-      
-      .custom-breadcrumbs-list {
-          display: flex;
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          font-size: 18px;
-      }
-      
-      .custom-breadcrumbs-item + .custom-breadcrumbs-item::before {
-          content: ">";
-          margin: 0 0.5rem;
-          color: #6b7280;
-      }
-      
-      .custom-breadcrumbs-link {
-          text-decoration: none;
-          color: #000;
-          font-weight: 600;
-          transition: color 0.2s ease;
-      }
-      
-      .custom-breadcrumbs-link:hover,
-      .custom-breadcrumbs-link:focus {
-          color: #007c89;
-      }
-      
-      .custom-breadcrumbs-current {
-          color: #007c89!important;
-          font-weight: 600;
-      }
-      </style>
-      
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<header class="header">
+    <div class="logo">
+        <img src="https://www.eklavvya.com/wp-content/uploads/2024/07/EY-Logo.webp" alt="EY Logo">
+    </div>
+    <nav style="display: flex;justify-content: center;align-items: center;">
+        <button class="nav-btn">Site Navigation</button>
+        <button class="nav-btn">Tech Support</button>
+        <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/Untitled-design-5.png" style="width: 25px;margin-left: 15px;">
+    </nav>
+</header>
+<div class="shipping-banner" data-sticky="sticky">
+    <div class="shipping-banner__inner container-2">
+                
+                        <div class="shipping-banner__arrow">
+                <svg class="icon" width="22" height="12">
+                    <use xlink:href="#shop-now-arrow"></use>
+                </svg>
+            </div>
+        </a>
+        </div>
+</div>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="header-2">
+                <div class="arrow"></div>
+                <div class="arrow-2"></div>
+                <div>
+                    <h1>Our Commitment</h1>
+                    <h2>To development. To our people. To the future.</h2>
+                </div>
+            </div>
+            <p>Dear Colleague,</p>
+            <p>At the outset, we would like to thank each of you for taking out time to participate in crafting your individual development journey!</p>
+            <p>This experience is an opportunity for you to reflect and take charge of your individual unique careers and gain insight on strengths and opportunity areas. The tasks you will encounter are designed to mirror real-life situations and provide you with an opportunity to experience and navigate change. The outcome of this exercise is intended to support you in your unique personal journey.</p>
+            <p>We request you to make the most of this opportunity and attempt each task with the utmost sincerity and candidness.</p>
+            <p>Wish you the very best.</p>
+            <p>Cheers!<br>Leadership Team.</p>
+        </div>
+        <div class="right-section">
+            
+            <iframe width="560" height="500" src="https://www.youtube.com/embed/OkdPRBU4GdY?si=dQHyBrddtCYXC5f1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           
+        </div>
+        <button class="next-button" href="Tasks Details.html">Procced</button>
+    </div>
+    
+</body>
+</html>
