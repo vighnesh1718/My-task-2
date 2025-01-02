@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Full-page background video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Centered form box */
+        .form-container {
+            display: none; /* Hidden initially */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.5);
+            width: 400px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            animation: pop-in 0.5s forwards;
+        }
+
+        /* Animation for pop-in effect */
+        @keyframes pop-in {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        
+
+        .form-logo img {
+            max-width: 180px;
+        }
+
+        .form-gif img {
+            max-width: 110px;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #333;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            padding-top: 20px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label {
+            top: 0px;
+            font-size: 12px;
+            color: #007BFF;
+            background-color: #fff;
+            padding: 5px;
+        }
+
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        .show-password {
+            display: flex;
+            align-items: center;
+        }
+
+        .show-password span {
+            margin-left: 5px;
+            font-size: 14px;
+            color: #000;
+        }
+        .terms span {
+            margin-left: 5px;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .form-button {
+            margin-top: 15px;
+        }
+
+        .form-button button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-image: linear-gradient(to right, #f8de4f 0%, #f8de4ff0 51%, #f8de4fe5 100%) !important;
+            color: rgb(22, 37, 55);
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+        }
+.logo-container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -10px;
+}
+        .heading
+        {
+          color: #ffd700;
+          
+        }
+        .sub-heading
+        {
+          color: rgb(22, 37, 55);
+          margin-bottom: 10px;
+          font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="video-background" autoplay muted>
+        <source src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/AI.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Form Container -->
+    <div class="form-container" id="loginForm">
+      <div class="logo-container">
+        <div class="form-logo">
+            <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/ey-logo.png" alt="Logo">
+        </div>
+        <div class="form-gif">
+          <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/ai-gif1.gif" alt="Logo">
+      </div>
+      </div>
+      <h1 class="heading">AI Assessment</h1>
+      <p class="sub-heading">Next-Gen Competency Evalution</p>
+        <div class="form-group">
+            <input type="email" id="email" placeholder=" " required>
+            <label for="email">Email Address</label>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" placeholder=" " required>
+            <label for="password">Password</label>
+        </div>
+        <div class="form-group show-password">
+            <input type="checkbox" id="showPassword">
+            <span>Show Password</span>
+        </div>
+        <div class="form-group terms">
+            <input type="checkbox" id="termsAndConditions" required>
+            <span>I agree to the Terms & Conditions</span>
+        </div>
+        <div class="form-button">
+            <button type="button" onclick="validateForm()">Start Assessment</button>
+        </div>
+    </div>
+
+    <script>
+        // Show the form after 3 seconds
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('loginForm').style.display = 'block';
+            }, 3000);
+        };
+
+        // Toggle password visibility
+        document.getElementById('showPassword').addEventListener('change', function() {
+            const passwordField = document.getElementById('password');
+            passwordField.type = this.checked ? 'text' : 'password';
+        });
+
+        // Form validation
+        function validateForm() {
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const terms = document.getElementById('termsAndConditions');
+
+            if (!email.value) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (!password.value) {
+                alert('Please enter your password.');
+                return;
+            }
+
+            if (!terms.checked) {
+                alert('You must agree to the Terms & Conditions.');
+                return;
+            }
+
+            alert('Form submitted successfully!');
+        }
+    </script>
+</body>
+</html>
