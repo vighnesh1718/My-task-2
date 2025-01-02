@@ -176,7 +176,7 @@
       </div>
       </div>
       <h1 class="heading">AI Assessment</h1>
-      <p class="sub-heading">Next-Gen Competency Evalution</p>
+      <p class="sub-heading">from individual competence to powerful capabilities</p>
         <div class="form-group">
             <input type="email" id="email" placeholder=" " required>
             <label for="email">Email Address</label>
