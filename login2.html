@@ -15,7 +15,7 @@
         body, html {
             
             font-family: 'Montserrat', sans-serif;
-            background: #03494f;
+            
             height: 100vh;
             display: flex;
             align-items: center;
@@ -43,7 +43,15 @@
         }
 
         
-
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
         
 
         .form-logo img {
@@ -158,13 +166,16 @@
   </div>
     <!-- Background Video -->
     
-    
-  <div class="neural-network"></div>
+    <video class="video-background" autoplay muted loop>
+        <source src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/stock-video-abstract-connected-dots-on-bright-blue-background-technology-concept.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  
     <!-- Form Container -->
     <div class="form-container" id="loginForm">
       
       <h1 class="heading" style="margin: 0px;">AI Assessment</h1>
-      <p class="sub-heading" style="margin-bottom: 20px;">From Individual Competence to Powerful Capabilities</p>
+      <p class="sub-heading" style="margin-bottom: 20px;">Next-Gen Competency Evalution</p>
         <div class="form-group">
             <input type="email" id="email" placeholder=" " required>
             <label for="email">Email Address</label>
