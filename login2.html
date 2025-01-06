@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700;800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
@@ -169,12 +170,12 @@
         }
        
     .heading-2 {
-        color: rgb(255, 255, 255);
+        color: rgb(248, 223, 84);
         margin-bottom: 10px;
         font-weight: 700;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Dancing Script', cursive;
         position: relative;
-        font-size: 40px;
+        font-size: 60px;
     }
 
     .heading-2::after {
@@ -196,6 +197,18 @@
             content: '...';
         }
     }
+
+    @media (max-width: 768px) {
+        
+            body, html
+          {
+            flex-direction: column;
+          }  
+          .heading-2 {
+  
+  font-size: 40px;
+          }
+        }
 </style>
 
     
@@ -280,3 +293,4 @@
     </script>
 </body>
 </html>
+
