@@ -13,33 +13,25 @@
         }
 
         body, html {
-            
             font-family: 'Montserrat', sans-serif;
-            
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: space-between;
             overflow: hidden;
-            width: 95%;
+            width: 100%;
+            padding: 20px;
+           
         }
 
-        /* Full-page background video */
         
-
-        /* Centered form box */
         .form-container {
-            
-           
-            
             text-align: center;
             width: 400px;
             background: #fff;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
-            
-          
         }
 
         
@@ -60,6 +52,7 @@
 
         .form-gif img {
             max-width: 180px;
+           
         }
 
         .form-group {
@@ -132,37 +125,85 @@
             font-size: 16px;
             cursor: pointer;
             font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
-.logo-container
-{
-  display: flex;
-  justify-content: space-between;
+
+        
+       
+       
+    .subheading {
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        width: fit-content;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid #fff; /* Optional blinking cursor */
+        animation: typingEffect 4s steps(40, end), blink 0.6s step-end infinite;
+    }
+
+    @keyframes typingEffect {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blink {
+        from, to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #fff;
+        }
+    }
+
+
+        .form-gif
+        {
+            display: flex;
   align-items: center;
-  margin-left: 100px;
-}
-        .heading
-        {
-          color: #ffd700;
-          
+
         }
-        .sub-heading
-        {
-          color: rgb(22, 37, 55);
-          margin-bottom: 10px;
-          font-weight: 500;
+       
+    .heading-2 {
+        color: rgb(255, 255, 255);
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
+        font-size: 40px;
+    }
+
+    .heading-2::after {
+        content: '...';
+        animation: typingDots 1.5s steps(3, end) infinite;
+    }
+
+    @keyframes typingDots {
+        0% {
+            content: '';
         }
-    </style>
+        33% {
+            content: '.';
+        }
+        66% {
+            content: '..';
+        }
+        100% {
+            content: '...';
+        }
+    }
+</style>
+
+    
 </head>
 <body>
   
-  <div class="logo-container">
-    <div class="form-logo">
-      <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/ey-logo1.png" alt="Logo">
-  </div>
-    <div class="form-gif">
-      <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/ai-gif1.gif" alt="Logo">
-  </div>
+  
+    
   </div>
     <!-- Background Video -->
     
@@ -170,12 +211,16 @@
         <source src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/stock-video-abstract-connected-dots-on-bright-blue-background-technology-concept.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-  
+    <div class="text-container">
+        <h1 class="heading-2">Connect The Dots</h1>
+        <p class="subheading">From Individual Competence to Powerful Capabilities</p>
+        </div>
     <!-- Form Container -->
+     <div class="form-gif"> 
     <div class="form-container" id="loginForm">
       
-      <h1 class="heading" style="margin-bottom: 5px;">AI Assessment</h1>
-      <p class="sub-heading" style="margin-bottom: 20px;">From Individual Competence to Powerful Capabilities</p>
+        <img src="https://www.eklavvya.com/wp-content/uploads/2024/07/EY-Logo.webp" alt="Logo" style="width: 90px;margin-bottom: 20px;">
+      <h1 class="heading" style="margin-bottom: 20px;">Login Credentials</h1>
         <div class="form-group">
             <input type="email" id="email" placeholder=" " required>
             <label for="email">Email Address</label>
@@ -196,7 +241,10 @@
             <button type="button" onclick="validateForm()">Start Assessment</button>
         </div>
     </div>
-
+    <div class="form-gif">
+        <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/Ey-AI-Robo.gif" alt="Logo">
+    </div>
+</div>
     <script>
        
 
@@ -232,81 +280,4 @@
     </script>
 </body>
 </html>
-<script>
-  function createNeuralNetwork() {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      canvas.style.position = 'absolute';
-      canvas.style.top = '0';
-      canvas.style.left = '0';
-      canvas.style.width = '100%';
-      canvas.style.height = '100%';
-      document.querySelector('.neural-network').appendChild(canvas);
 
-      let particles = [];
-      const particleCount = 100;
-      const connectionDistance = 150;
-      const particleSize = 3;
-
-      function resize() {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-      }
-      resize();
-      window.addEventListener('resize', resize);
-
-      class Particle {
-          constructor() {
-              this.x = Math.random() * canvas.width;
-              this.y = Math.random() * canvas.height;
-              this.vx = (Math.random() - 0.5) * 1;
-              this.vy = (Math.random() - 0.5) * 1;
-          }
-
-          update() {
-              this.x += this.vx;
-              this.y += this.vy;
-
-              if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-              if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-          }
-      }
-
-      for (let i = 0; i < particleCount; i++) {
-          particles.push(new Particle());
-      }
-
-      function animate() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-          particles.forEach(particle => {
-              particle.update();
-
-              ctx.beginPath();
-              ctx.arc(particle.x, particle.y, particleSize, 0, Math.PI * 2);
-              ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
-              ctx.fill();
-
-              particles.forEach(otherParticle => {
-                  const dx = particle.x - otherParticle.x;
-                  const dy = particle.y - otherParticle.y;
-                  const distance = Math.sqrt(dx * dx + dy * dy);
-
-                  if (distance < connectionDistance) {
-                      ctx.beginPath();
-                      ctx.moveTo(particle.x, particle.y);
-                      ctx.lineTo(otherParticle.x, otherParticle.y);
-                      ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 * (1 - distance/connectionDistance)})`;
-                      ctx.stroke();
-                  }
-              });
-          });
-
-          requestAnimationFrame(animate);
-      }
-
-      animate();
-  }
-
-  createNeuralNetwork();
-</script>
