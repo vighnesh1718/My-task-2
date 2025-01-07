@@ -22,13 +22,13 @@
         </nav>
     </header>
     <div class="shipping-banner" data-sticky="sticky">
-        <div class="shipping-banner__inner container-2">
+       
+            
             <img class="ima-banner" src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/CompetencyConnect-2.png" alt="">
-                            <div class="shipping-banner__arrow">
-                    <svg class="icon" width="22" height="12">
-                        <use xlink:href="#shop-now-arrow"></use>
-                    </svg>
-                </div>
+            <div class="webcam-container" style="position: relative; right: 90px;">
+                <video id="webcam-feed" autoplay muted  style="width: 120px;"></video>
+            </div>
+       
             </a>
             </div>
     </div>
@@ -63,12 +63,6 @@
         <li>
             <a ID="faq-item-7">Case Study</a>
         </li>
-        
-   
-       
-        
-
-
       </ul>
       <div class="right-arrow active">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -193,7 +187,12 @@
         <!-- Main Content -->
         <div class="content">
             <div class="chat-box" id="chat-box">
-                <div class="message bot-message">
+                <div class="chat-avatar" style="display: flex;justify-content: center;align-content: center;margin-bottom: 40px;">
+                <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="position: absolute;top:-30px;width: 100px;border-radius: 50%;">
+                <button class="change-avatar" style="position: absolute;">Change Avatars</button>
+            </div>
+                <div class="message bot-message" >
+                    <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="width: 35px;float: left;margin-right: 10px;border-radius: 10px;">
                     <strong>Uma:</strong> Hi! It's a pleasure to have you here for the interview. Could you tell me a bit about yourself and your work experience?
                 </div>
             </div>
@@ -212,7 +211,14 @@
     </div>
 </div>
 </main>
-
+<div class="avatar-select" style="z-index:9999;background-color: #fff;padding: 20px;display: none;border-radius: 15px;box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; position: absolute;">
+    <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/1.jpg">
+    <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/2.jpg">
+    <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/3.jpg">
+    <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/4.jpg">
+    <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/5.jpg">
+    <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/6.jpg">
+</div>
 </body>
 </html>
 <style>
@@ -228,6 +234,19 @@
     body {
         font-family: 'Montserrat', sans-serif;
       background-color: #fef8f8;
+    }
+
+    .change-avatar {
+        background-color: #f8de4f;
+  color: #162537;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
     }
 .img-thumb {
     width: 40%;
@@ -288,7 +307,7 @@ body {
   font-weight: 500;
 }
 
-.shipping-banner__inner::after{
+.shipping-banner::after{
   right: 25px;
 }
 .shipping-banner {
@@ -310,7 +329,7 @@ display: -ms-flexbox;
 display: flex;
 -webkit-box-pack: center;
 -ms-flex-pack: center;
-
+justify-content: space-between;
 -webkit-box-align: center;
 -ms-flex-align: center;
 align-items: center;
@@ -318,25 +337,24 @@ align-items: center;
 transition: font-size .1s ease-in-out;
 z-index: 5;
 overflow: hidden;
+
 }
-.shipping-banner__inner::after {
+.shipping-banner::after {
 content: "";
 display: inline-block!important;
 position: absolute!important;
-
 width: 94px;
 height: 180px;
 top: 0;
--webkit-transform: rotate(-35deg) translateY(-50%);
+-webkit-transsform: rotate(-35deg) translateY(-50%);
 transform: rotate(-35deg) translateY(-50%);
 border-right: 3px solid #fff;
 }
 .ima-banner
 {
-left: 30px;
   position: relative;
   width: 140px;
-  margin-top: 12px;
+  left: 30px;
 }
 
 /* Main section styling */
@@ -354,7 +372,7 @@ main {
     top: 0;
     z-index: 10;
     max-width: 100%;
-    margin: 15px auto;
+    margin: 18px auto;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
@@ -362,7 +380,7 @@ main {
 
 .scrollable-tabs-container svg{
     width: 40px;
-  height: 40px;
+    height: 40px;
     cursor: pointer;
     padding: 8px;
     border-radius: 8%;
@@ -375,7 +393,7 @@ main {
 {
     display: flex;
     gap:16px;
-margin-left: -40px !important;
+    margin-left: -40px !important;
     margin: 0;
     list-style: none;
     overflow-x: scroll;
@@ -392,12 +410,12 @@ margin-left: -40px !important;
     text-decoration: none!important;
     background-color: #fff;
     padding: 10px 40px;
-        display: inline-block;
+    display: inline-block;
     user-select: none;
     white-space: nowrap;
-      border-radius: 8px;
-      font-weight: 500!important;
-      font-size: 18px;
+    border-radius: 8px;
+    font-weight: 500!important;
+    font-size: 18px;
 }
 
 .scrollable-tabs-container a.active{
@@ -464,7 +482,7 @@ p{
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px); /* Move up to create space */
-    background-color: #c9c9c9;
+    background: linear-gradient(90deg, #00555c, #07393d);
   padding: 10px;
 }
 
@@ -732,14 +750,14 @@ initTabs();
             // Add user message to chat
             const userMessage = document.createElement('div');
             userMessage.className = 'message user-message';
-            userMessage.innerHTML = `<strong>You:</strong> ${message}`;
+            userMessage.innerHTML = `<img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="width: 35px;float: left;margin-right: 10px;border-radius: 10px;"><strong>You:</strong> ${message}`;
             chatBox.appendChild(userMessage);
 
             // Simulate AI response
             setTimeout(() => {
                 const botMessage = document.createElement('div');
                 botMessage.className = 'message bot-message';
-                botMessage.innerHTML = `<strong>Uma:</strong> Thank you for sharing. Can you also tell me about a time you identified an emerging opportunity for business growth?`;
+                botMessage.innerHTML = `<img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="width: 35px;float: left;margin-right: 10px;border-radius: 10px;"><strong>Uma:</strong> Thank you`;
                 chatBox.appendChild(botMessage);
 
                 chatBox.scrollTop = chatBox.scrollHeight;
@@ -755,7 +773,81 @@ initTabs();
         alert("Microphone feature is not implemented yet.");
     }
 </script>
+<script>
+//show webcam feed code
+
+    // Access the user's webcam and display the feed in the video element
+    const videoElement = document.getElementById('webcam-feed');
+
+    async function enableWebcam() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            videoElement.srcObject = stream;
+        } catch (error) {
+            console.error("Error accessing webcam:", error);
+            alert("Unable to access webcam. Please check your permissions.");
+        }
+    }
+
+    // Enable the webcam feed when the page loads
+    window.addEventListener('load', enableWebcam);
+</script>
+<script>
+    //change avatar of user code
+    document.addEventListener('DOMContentLoaded', () => {
+    const changeAvatarButton = document.querySelector('.change-avatar');
+    const avatarSelectContainer = document.querySelector('.avatar-select');
+    const avatarOverlay = document.createElement('div');
+    const avatars = document.querySelectorAll('.avatar-select img');
+    const body = document.body;
+
+    // Create and append overlay to the body
+    avatarOverlay.classList.add('avatar-overlay');
+    body.appendChild(avatarOverlay);
+
+    // Show avatar select container and overlay on button click
+    changeAvatarButton.addEventListener('click', () => {
+        const isShown = avatarSelectContainer.style.display === 'block';
+        avatarSelectContainer.style.display = isShown ? 'none' : 'block';
+        avatarOverlay.style.display = isShown ? 'none' : 'block';
+    });
+
+    // Replace avatar in user messages
+    avatars.forEach((avatar) => {
+        avatar.addEventListener('click', () => {
+            const newAvatarSrc = avatar.src;
+
+            // Update all user-message images
+            const userMessageAvatars = document.querySelectorAll('.user-message img');
+            userMessageAvatars.forEach((img) => {
+                img.src = newAvatarSrc;
+            });
+
+            // Hide avatar selection container and overlay
+            avatarSelectContainer.style.display = 'none';
+            avatarOverlay.style.display = 'none';
+        });
+    });
+
+    // Hide avatar select and overlay when clicking outside
+    avatarOverlay.addEventListener('click', () => {
+        avatarSelectContainer.style.display = 'none';
+        avatarOverlay.style.display = 'none';
+    });
+});
+
+</script>
 <style>
+    .avatar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 99; /* Place it below the avatar-select */
+    display: none; /* Initially hidden */
+}
     .container {
             display: flex;
             height: 78vh;
@@ -810,11 +902,11 @@ initTabs();
             color: #000;
            margin-bottom: 25px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 0px 10px 10px 10px;
   background-color: #D9FDD3;
   align-self: flex-end;
-  font-weight: 600;
+  font-weight: 500;
 
         }
         .bot-message {
@@ -823,7 +915,7 @@ initTabs();
             text-align: left;
             margin-bottom: 25px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 10px 10px 0px 10px;
   background-color: #E2E3FF;
   align-self: flex-start;
