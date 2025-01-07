@@ -2,10 +2,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <title>My Tasks</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pn7L0...==">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -21,7 +21,17 @@
             <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/Untitled-design-5.png" style="width: 25px;margin-left: 15px;">
         </nav>
     </header>
-
+    <div class="shipping-banner" data-sticky="sticky">
+        <div class="shipping-banner__inner container-2">
+            <img class="ima-banner" src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/12/CompetencyConnect-2.png" alt="">
+                            <div class="shipping-banner__arrow">
+                    <svg class="icon" width="22" height="12">
+                        <use xlink:href="#shop-now-arrow"></use>
+                    </svg>
+                </div>
+            </a>
+            </div>
+    </div>
 <main>
     
 <div class="scrollable-tabs-container">
@@ -216,7 +226,7 @@
     }
     
     body {
-        font-family: 'Nunito Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
       background-color: #fef8f8;
     }
 .img-thumb {
@@ -232,7 +242,7 @@
 }
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-image: url('https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2024/11/White-Dark-Blue-Futuristic-Robot-Desktop-Wallpaper-3.png');    
     color: #000;
     background-attachment: fixed;
@@ -251,7 +261,7 @@ body {
   justify-content: space-between;
   align-items: center;
  padding: 18px 45px;
-  background: rgba(255, 255, 255, 0.5);
+  background: #fff;
   backdrop-filter: blur(10px);
   margin: 0px 0px 0px 0px;
   width: 100%;
@@ -265,8 +275,8 @@ body {
 }
 
 .nav-btn {
-    background-color: #7b7b7b;
-  color: #F0F0F0;
+    background-color: #f8de4f;
+  color: #162537;
   border: none;
   padding: 8px 20px;
   margin-left: 10px;
@@ -274,10 +284,60 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 14px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
+.shipping-banner__inner::after{
+  right: 25px;
+}
+.shipping-banner {
+  height: 62px;
+  font-size: 20px;
+}
+.shipping-banner {
+background: rgb(248, 222, 79);
+height: 65px;
+font-size: 13px;
+line-height: 1.85;
+text-align: center;
+position: relative;
+width: 100%;
+top: 0;
+left: 0;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-transition: font-size .1s ease-in-out;
+transition: font-size .1s ease-in-out;
+z-index: 5;
+overflow: hidden;
+}
+.shipping-banner__inner::after {
+content: "";
+display: inline-block!important;
+position: absolute!important;
+
+width: 94px;
+height: 180px;
+top: 0;
+-webkit-transform: rotate(-35deg) translateY(-50%);
+transform: rotate(-35deg) translateY(-50%);
+border-right: 3px solid #fff;
+}
+.ima-banner
+{
+left: 30px;
+  position: relative;
+  width: 140px;
+  margin-top: 12px;
+}
 
 /* Main section styling */
 main {
@@ -336,15 +396,15 @@ margin-left: -40px !important;
     user-select: none;
     white-space: nowrap;
       border-radius: 8px;
-      font-weight: 700!important;
+      font-weight: 500!important;
       font-size: 18px;
 }
 
 .scrollable-tabs-container a.active{
-    background-image: linear-gradient(to right, #f39c12 0%, #ffab26  51%, #f39c12 100%);
-    color:#fff;
+    background-color: #f8de4f;
+  color: #162537;
     border-radius: 8px;
-    font-weight:700!important;
+    font-weight:500!important;
     border:none!important;
 
 }
@@ -371,6 +431,9 @@ display: flex;
     right: -9px;
   justify-content: flex-end;
   background: linear-gradient(to left, #fff 50%, transparent);
+}
+p{
+    font-weight:500;
 }
 .scrollable-tabs-container .left-arrow{
     background: linear-gradient(to right, #fff 50%, transparent);
@@ -426,23 +489,23 @@ display: flex;
 .tabs-content h1
 {
     text-align: center;
-  font-weight: 800;
-  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   margin-top: 0px;
 }
 
 .tabs-next
 {
-    background-image: linear-gradient(to right, #f39c12 0%, #ffab26 51%, #f39c12 100%);
-    color: white;
+    background-color: #f8de4f;
+  color: #162537;
     padding: 8px 40px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s ease;
   font-size: 16px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700; 
   display: block; 
   margin: 30px auto 0px auto;
@@ -764,7 +827,7 @@ initTabs();
   border-radius: 10px 10px 0px 10px;
   background-color: #E2E3FF;
   align-self: flex-start;
-  font-weight: 600;
+  font-weight: 500;
         }
         .chat-input {
             display: flex;
@@ -778,7 +841,7 @@ initTabs();
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
-            font-family: 'Nunito Sans',Helvetica,Arial,Lucida,sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
         .chat-input button {
             background-color: transparent;
