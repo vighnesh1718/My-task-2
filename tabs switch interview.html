@@ -188,9 +188,9 @@
         <div class="content">
             <div class="chat-box" id="chat-box">
                 <div class="chat-avatar" style="display: flex;justify-content: center;align-content: center;margin-bottom: 40px;">
-                <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="position: absolute;top:-30px;width: 100px;border-radius: 50%;left:50%;">
-                <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/1.jpg" style="position: absolute;top:-30px;width: 100px;border-radius: 50%;">
-                <button class="change-avatar" style="position: absolute;">Change Avatars</button>
+                    <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/6.jpg" style="position: absolute;top:-30px;width: 100px;border-radius: 50%;left:50%;">
+                    <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="position: absolute;top:-30px;width: 100px;border-radius: 50%;">
+                    <button class="change-avatar" style="position: absolute;">Change Avatars</button>
             </div>
                 <div class="message bot-message" >
                     <img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="width: 35px;float: left;margin-right: 10px;border-radius: 10px;">
@@ -248,6 +248,7 @@
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  left:48%;
     }
 .img-thumb {
     width: 40%;
@@ -743,32 +744,34 @@ initTabs();
 </script>
 <script>
     function sendMessage() {
-        const inputField = document.getElementById('user-input');
-        const message = inputField.value.trim();
-        const chatBox = document.getElementById('chat-box');
+    const inputField = document.getElementById('user-input');
+    const message = inputField.value.trim();
+    const chatBox = document.getElementById('chat-box');
+    const savedAvatar = localStorage.getItem('selectedAvatar') || 'https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/6.jpg'; // Default avatar
 
-        if (message !== '') {
-            // Add user message to chat
-            const userMessage = document.createElement('div');
-            userMessage.className = 'message user-message';
-            userMessage.innerHTML = `<img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="width: 35px;float: left;margin-right: 10px;border-radius: 10px;"><strong>You:</strong> ${message}`;
-            chatBox.appendChild(userMessage);
+    if (message !== '') {
+        // Add user message to chat
+        const userMessage = document.createElement('div');
+        userMessage.className = 'message user-message';
+        userMessage.innerHTML = `<img src="${savedAvatar}" style="width: 35px;float: left;margin-right: 10px;border-radius: 10px;"><strong>You:</strong> ${message}`;
+        chatBox.appendChild(userMessage);
 
-            // Simulate AI response
-            setTimeout(() => {
-                const botMessage = document.createElement('div');
-                botMessage.className = 'message bot-message';
-                botMessage.innerHTML = `<img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="width: 35px;float: left;margin-right: 10px;border-radius: 10px;"><strong>Uma:</strong> Thank you`;
-                chatBox.appendChild(botMessage);
+        // Simulate AI response
+        setTimeout(() => {
+            const botMessage = document.createElement('div');
+            botMessage.className = 'message bot-message';
+            botMessage.innerHTML = `<img src="https://wordpress-63123-2643454.cloudwaysapps.com/wp-content/uploads/2025/01/avatar-3.jpg" style="width: 35px;float: left;margin-right: 10px;border-radius: 10px;"><strong>Uma:</strong> Thank you`;
+            chatBox.appendChild(botMessage);
 
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }, 1000);
-
-            // Clear input field
-            inputField.value = '';
             chatBox.scrollTop = chatBox.scrollHeight;
-        }
+        }, 1000);
+
+        // Clear input field
+        inputField.value = '';
+        chatBox.scrollTop = chatBox.scrollHeight;
     }
+}
+
 
     function startRecording() {
         alert("Microphone feature is not implemented yet.");
@@ -794,12 +797,12 @@ initTabs();
     window.addEventListener('load', enableWebcam);
 </script>
 <script>
-    //change avatar of user code
     document.addEventListener('DOMContentLoaded', () => {
     const changeAvatarButton = document.querySelector('.change-avatar');
     const avatarSelectContainer = document.querySelector('.avatar-select');
     const avatarOverlay = document.createElement('div');
     const avatars = document.querySelectorAll('.avatar-select img');
+    const userAvatarImg = document.querySelector('.chat-avatar img'); // Select the user avatar image
     const body = document.body;
 
     // Create and append overlay to the body
@@ -813,10 +816,13 @@ initTabs();
         avatarOverlay.style.display = isShown ? 'none' : 'block';
     });
 
-    // Replace avatar in user messages
+    // Replace avatar in user messages and the main avatar
     avatars.forEach((avatar) => {
         avatar.addEventListener('click', () => {
             const newAvatarSrc = avatar.src;
+
+            // Update the main user avatar
+            userAvatarImg.src = newAvatarSrc;
 
             // Update all user-message images
             const userMessageAvatars = document.querySelectorAll('.user-message img');
@@ -827,6 +833,9 @@ initTabs();
             // Hide avatar selection container and overlay
             avatarSelectContainer.style.display = 'none';
             avatarOverlay.style.display = 'none';
+
+            // Save the selected avatar for new messages
+            localStorage.setItem('selectedAvatar', newAvatarSrc);
         });
     });
 
@@ -835,7 +844,14 @@ initTabs();
         avatarSelectContainer.style.display = 'none';
         avatarOverlay.style.display = 'none';
     });
+
+    // Load the saved avatar on page load
+    const savedAvatar = localStorage.getItem('selectedAvatar');
+    if (savedAvatar) {
+        userAvatarImg.src = savedAvatar;
+    }
 });
+
 
 </script>
 <style>
