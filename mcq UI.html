@@ -977,3 +977,159 @@
           
           
           </script>
+
+
+
+
+ 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .floating-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .palette {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            display: none;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            width: 30%;
+        }
+
+        .palette .status {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .status div {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .status .answered {
+            background-color: green;
+        }
+
+        .status .unanswered {
+            background-color: #0e3c6e;
+        }
+
+        .status .current {
+            background-color: grey;
+        }
+
+        .palette .question {
+            width: 40px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0e3c6e;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+        }
+
+        .palette .question:hover {
+            background-color: #0e3c6e;
+        }
+
+        .palette .question.answered {
+            background-color: green;
+        }
+
+        .palette .question.current {
+            background-color: grey;
+        }
+    </style>
+
+    <div class="floating-icon" onclick="togglePalette()">+</div>
+
+    <div class="palette" id="palette">
+        <div class="status">
+            <div class="answered">Answered</div>
+            <div class="unanswered">Unanswered</div>
+            <div class="current">Current Question</div>
+        </div>
+        <div class="question" onclick="closePalette()">1</div>
+        <div class="question" onclick="closePalette()">2</div>
+        <div class="question" onclick="closePalette()">3</div>
+        <div class="question" onclick="closePalette()">4</div>
+        <div class="question" onclick="closePalette()">5</div>
+        <div class="question" onclick="closePalette()">6</div>
+        <div class="question" onclick="closePalette()">7</div>
+        <div class="question" onclick="closePalette()">8</div>
+        <div class="question" onclick="closePalette()">9</div>
+        <div class="question" onclick="closePalette()">10</div>
+        <div class="question" onclick="closePalette()">11</div>
+        <div class="question" onclick="closePalette()">12</div>
+        <div class="question" onclick="closePalette()">13</div>
+        <div class="question" onclick="closePalette()">14</div>
+        <div class="question" onclick="closePalette()">15</div>
+        <div class="question" onclick="closePalette()">16</div>
+        <div class="question" onclick="closePalette()">17</div>
+        <div class="question" onclick="closePalette()">18</div>
+        <div class="question" onclick="closePalette()">19</div>
+        <div class="question" onclick="closePalette()">20</div>
+        <div class="question" onclick="closePalette()">21</div>
+        <div class="question" onclick="closePalette()">22</div>
+        <div class="question" onclick="closePalette()">23</div>
+        <div class="question" onclick="closePalette()">24</div>
+        <div class="question" onclick="closePalette()">25</div>
+        <div class="question" onclick="closePalette()">26</div>
+        <div class="question" onclick="closePalette()">27</div>
+        <div class="question" onclick="closePalette()">28</div>
+        <div class="question" onclick="closePalette()">29</div>
+        <div class="question" onclick="closePalette()">30</div>
+        <div class="question" onclick="closePalette()">31</div>
+        <div class="question" onclick="closePalette()">32</div>
+        <div class="question" onclick="closePalette()">33</div>
+    </div>
+
+    <script>
+        function togglePalette() {
+            const palette = document.getElementById('palette');
+            palette.style.display = palette.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function closePalette() {
+            const palette = document.getElementById('palette');
+            palette.style.display = 'none';
+        }
+    </script>
+
